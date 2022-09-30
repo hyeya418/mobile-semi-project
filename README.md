@@ -2,7 +2,8 @@
 
 >스타벅스 제주 모바일 웹사이트
 
-![image](https://user-images.githubusercontent.com/101793298/193309051-3202b20c-c3a6-4c0d-83d2-e3d282da1532.png)
+
+<img src="https://user-images.githubusercontent.com/101793298/193309051-3202b20c-c3a6-4c0d-83d2-e3d282da1532.png" width="300" height="900"/>
 
 ---
 ### 개발 목표
@@ -30,8 +31,3 @@
 ### 개발기간
 2022.07.25.～ 2022.08.02
 
----
-### 향후 개선사항
-- ~~회원가입 시 아이디 중복확인 기능 구현~~ OK!
-- 조건 별 상품 정렬 기능 구현
-- 결제/주문 기능 구현
