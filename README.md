@@ -6,16 +6,15 @@
 <img src="https://user-images.githubusercontent.com/101793298/193309051-3202b20c-c3a6-4c0d-83d2-e3d282da1532.png" width="300" height="900"/>
 
 ---
-### 개발 목표
+## 개발 목표
 
-> JQuery Mobile을 활용한 모바일 웹 인터페이스 구현
-> 기능보다는 화면 UI 중심의 프로젝트
+💡JQuery Mobile을 활용한 모바일 웹 인터페이스 구현 (기능 보다는 UI 중심의 프로젝트)
 
-### 구현 기능
- > 회원관리
+## 구현 기능
+회원관리
  
 ---
-### 개발환경
+## 개발환경
 
 <div>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
@@ -28,6 +27,6 @@
 <br>
 
 ---
-### 개발기간
+## 개발기간
 2022.07.25.～ 2022.08.02
 
