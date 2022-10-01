@@ -15,6 +15,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path" value="${pageContext.request.contextPath}" />
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -41,8 +45,8 @@
 		<div data-role="content">
 			<div id="login">
 				<h1>로그인</h1>
-				<% String context=request.getContextPath(); %>
-				<form name="input" method="post" action="/mobileSemiProject/login_servlet/login.do">
+				<%-- <% String context=request.getContextPath(); %> --%>
+				<form name="input" method="post" action="${path}/login_servlet/login.do">
 					<input type="text" name="userid" id="userid" placeholder="아이디를 입력해 주세요.">
 					<input type="password" name="passwd" placeholder="비밀번호를 입력해 주세요.">
 					<input type="submit" value="로그인" data-theme="b" onclick="login_check()">

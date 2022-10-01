@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-//@WebServlet("/member_servlet/*")
+@WebServlet("/member_servlet/*")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

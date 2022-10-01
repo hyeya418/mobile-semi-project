@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+@WebServlet("/login_servlet/*")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class LoginController extends HttpServlet {
 	
 		//사용자가 요청한 주소 값
 		String uri=request.getRequestURI();
-		//컨텍스트 패스(웹 프로젝트의 이름, 식별자) => mobileSemiProject
+		//컨텍스트 패스(웹 프로젝트의 이름, 식별자) => jsp02
 		String context=request.getContextPath();
 		//DAO 객체 생성
 		StarbucksMemberDAO dao=new StarbucksMemberDAO();
@@ -54,11 +54,10 @@ public class LoginController extends HttpServlet {
 			response.sendRedirect(request.getContextPath()
 					+"/myjqm/login_m.jsp?message="+message);
 			
-			
-			
 		}else if(uri.indexOf("remind_id.do") != -1) {//회원 ID찾기
 			String email=request.getParameter("email");
 			StarbucksMemberDTO dto=new StarbucksMemberDTO();
+			
 			dto.setEmail(email);
 			String result=dao.remindIdCheck(dto);
 			//웹 영역에 저장

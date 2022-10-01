@@ -32,7 +32,7 @@ $(function(){
 			
 			$.ajax({
 				type : "post",
-				url : "/mobileSemiProject/login_servlet/remind_id.do",
+				url : "${path}/login_servlet/remind_id.do",
 				data : param,
 				success : function(result){
 					alert(result);
