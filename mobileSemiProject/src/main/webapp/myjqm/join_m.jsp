@@ -31,6 +31,34 @@ $(function() {//페이지가 로딩되자마자 자동으로 실행되는 코드
 	});
 });
 
+function insert(){
+	var param="userid="+$("#userid").val()
+	+"&passwd="+$("#passwd").val()
+	+"&name="+$("#name").val()
+	+"&email="+$("#email").val()
+	+"&tel="+$("#tel").val()
+	+"&birth="+$("#birth").val()
+	+"&address1="+$("#address1").val();
+	$.ajax({
+		type : "post",
+		url : "${path}/join_servlet/join.do",
+		async : false,
+		data : param,
+		success : function(){
+			//입력값 초기화
+			$("#userid").val("");
+			$("#passwd").val("");
+			$("#name").val("");
+			$("#email").val("");
+			$("#tel").val("");
+			$("#birth").val("");
+			$("#address1").val("");
+		}
+	});
+	document.input.submit();
+	location.href="${path}/myjqm/login_m.jsp";
+}
+
 function join_check() {
 	//아이디 입력 확인
 	var userid = document.input.userid.value; 
@@ -149,33 +177,6 @@ function join_check() {
 	alert("가입을 환영합니다. 로그인 페이지로 이동합니다.");
  	insert();
 	}
-
-function insert(){
-	var param="userid="+$("#userid").val()
-	+"&passwd="+$("#passwd").val()
-	+"&name="+$("#name").val()
-	+"&email="+$("#email").val()
-	+"&tel="+$("#tel").val()
-	+"&birth="+$("#birth").val()
-	+"&address1="+$("#address1").val();
-	$.ajax({
-		type : "post",
-		url : "${path}/join_servlet/join.do",
-		data : param,
-		success : function(){
-			//입력값 초기화
-			$("#userid").val("");
-			$("#passwd").val("");
-			$("#name").val("");
-			$("#email").val("");
-			$("#tel").val("");
-			$("#birth").val("");
-			$("#address1").val("");
-		}
-	});
-	document.input.submit();
-	location.href="${path}/myjqm/login_m.jsp";
-}
 </script>
 <style type="text/css">
 #event {line-height: 30px;}
@@ -197,7 +198,7 @@ function insert(){
 	  <div data-role="content">
 	   <div id="join">
 	    <h1>회원가입</h1>
-	    <form name="input" method="post" >
+	    <form name="input" method="post" id="form">
 	     <input id="userid" name="userid" placeholder="아이디">
 	     <p class="remark">* 아이디는 영문자, 숫자를 사용해서 4~10자리로 입력하세요.</p>
 	     <a href="#" data-role="button" data-theme="b">중복확인</a>

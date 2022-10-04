@@ -5,6 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path" value="${pageContext.request.contextPath}" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -39,7 +43,8 @@
 			
 			$.ajax({
 				type : "post",
-				url : "/mobileSemiProject/login_servlet/remind_pw.do",
+				url : "${path}/login_servlet/remind_pw.do",
+				async : false,
 				data : param,
 				success : function(result){
 					if(confirm(result)){
