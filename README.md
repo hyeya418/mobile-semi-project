@@ -7,15 +7,25 @@
 
 ---
 ## 개발 목표
-
 💡JQuery Mobile을 활용한 모바일 웹 인터페이스 구현 (기능 보다는 UI 중심의 프로젝트)
 
-## 구현 기능
-회원관리
- 
 ---
-## 개발환경
+## 개발환경 및 구현 도구
+OS : Microsoft Windows11 64bit <br>
+DBMS : Oracle11gXE <br>
+Language : HTML, CSS, JQuery, JQueryMobile, Java 1.8 <br>
+Editor : eclipse, sqlDeveloper <br>
 
+---
+## 개발기간
+2022.07.25.～ 2022.08.02
+
+---
+## 구현 기능
+- 로그인, 회원가입, ID/PW찾기
+- 다크모드
+
+--- 
 <div>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
 <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
@@ -26,7 +36,5 @@
 </div>
 <br>
 
----
-## 개발기간
-2022.07.25.～ 2022.08.02
+
 
